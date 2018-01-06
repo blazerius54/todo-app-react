@@ -65,8 +65,10 @@ export default class Task extends Component {
         return (
             <header className='task-header'>
             <h3 className={this.props.done? 'done-task': 'x'}>{this.props.title}</h3>
-            {this.renderClockImg()}
-            {this.renderBtn()}
+            <div className='header-div'>
+                {this.renderClockImg()}
+                {this.renderBtn()}
+            </div>
             </header>
         )
     }
