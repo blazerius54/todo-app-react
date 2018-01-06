@@ -13,20 +13,13 @@ let todos = [
   //   priority: 'high',
   //   done: false
   // },
-  // {
-  //   title: 'Aliqua enim cupidatat dolor amet irure qui.',
-  //   description: 'Non Culpa excepteur officia consectetur enim proident cillum aliqua anim. enim.Amet consequat aliqua ullamco in.',
-  //   responsible: 'Nadya',
-  //   priority: 'high',
-  //   done: true
-  // },
-  // {
-  //   title: 'Dolor aute incididunt occaecat et amet.',
-  //   description: 'Esse ullamco cillum aute laborum ipsum in anim amet laborum. anim. enim.Amet consequat aliqua ullamco in.',
-  //   responsible: 'Drew',
-  //   priority: 'low',
-  //   done: false
-  // }
+  {
+    title: 'Aliqua enim cupidatat dolor amet irure qui.',
+    description: 'Non Culpa excepteur officia consectetur enim proident cillum aliqua anim. enim.Amet consequat aliqua ullamco in.',
+    responsible: 'Nadya',
+    priority: 'high',
+    done: true
+  },
 ]
 
 // let prevTrg = '';
@@ -42,12 +35,12 @@ class App extends Component {
       isTodosFiltered: false,
       isTodosFiltredByPriority: false,
       isInputClosed: true,
-      prevTrg: ''
+      prevTrg: '',
     }
   }
-  
+
   componentDidMount() {
-    if(localStorage.getItem("todos") !== undefined){
+    if(localStorage.getItem("todos") !== null){
       let oldTodos = JSON.parse(localStorage.getItem('todos'))
       this.setState({
         todos: oldTodos,
