@@ -145,11 +145,9 @@ export default class Task extends Component {
                                 onChange={this.setNewDesc.bind(this)}
                                 ref={(select) => { this.selectPriority = select; }}
                             >
-                                <option>Lowest</option>
                                 <option>Low</option>
                                 <option>Medium</option>
                                 <option>High</option>
-                                <option>Highest</option>
                             </select>
 
                         </div>

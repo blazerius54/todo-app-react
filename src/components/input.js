@@ -1,19 +1,5 @@
 import React, { Component } from 'react';
 
-// let obj = {
-//     x:1,
-//     y:2,
-//     a:3,
-//     b: 4
-// }
-
-// for(let k in obj) {
-//     if(k === 'a') {
-//         break;
-//     }
-//     console.log(k);
-// };
-
 export default class Input extends Component {
   constructor(props) {
         super(props);
@@ -116,11 +102,9 @@ export default class Input extends Component {
                         onChange={this.handleInputChange.bind(this)}
                         ref={(select) => { this.selectTodoPriority = select; }}
                         >
-                            <option>Lowest</option>
                             <option>Low</option>
                             <option>Medium</option>
                             <option>High</option>
-                            <option>Highest</option>
                         </select>
                     </div>
                     <div className='form-section'>

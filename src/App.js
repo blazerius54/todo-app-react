@@ -6,23 +6,14 @@ import Task from './components/task.js'
 
 
 let todos = [
-  // {
-  //   title: 'Sit occaecat sunt nisi aliqua occaecat.',
-  //   description: 'Non non consectetur enim pariatur dolore enim.Amet consequat aliqua ullamco in.',
-  //   responsible: 'Max',
-  //   priority: 'high',
-  //   done: false
-  // },
   {
     title: 'Aliqua enim cupidatat dolor amet irure qui.',
     description: 'Non Culpa excepteur officia consectetur enim proident cillum aliqua anim. enim.Amet consequat aliqua ullamco in.',
-    responsible: 'Nadya',
-    priority: 'high',
+    responsible: 'Alan Parson',
+    priority: 'High',
     done: true
   },
 ]
-
-// let prevTrg = '';
 
 
 class App extends Component {
@@ -169,9 +160,9 @@ class App extends Component {
         <footer>
           <div className='function-btns'>
             <button onClick={(e)=>{this.filterTodos(e)}}>Show done</button>
-            <button onClick={(e)=>{this.filterTodos(e, 'Lowest')}}>Lowest</button>
+            <button onClick={(e)=>{this.filterTodos(e, 'Low')}}>Lowest</button>
+            <button onClick={(e)=>{this.filterTodos(e, 'Medium')}}>Medium</button>
             <button onClick={(e)=>{this.filterTodos(e, 'High')}}>High</button>
-            <button onClick={(e)=>{this.filterTodos(e, 'Highest')}}>Highest</button>
           </div>
           <h3>Total tasks: {this.state.todos.length}</h3>
           <h3>Done tasks: {this.state.todosFiltred.filter((item) => { return item.done }).length}</h3>
